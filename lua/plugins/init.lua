@@ -3,7 +3,7 @@ return {
   -- more options to those plugins.
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre",
+    -- event = "BufWritePre",
     opts = require "configs.conform",
   },
 
@@ -21,6 +21,7 @@ return {
         "lua",
         "go",
         "c",
+        "proto", -- For .proto
       },
     },
   },
@@ -34,6 +35,8 @@ return {
         "clangd",
         "clang-format",
         "rust-analyzer",
+        "gopls", -- For golang
+        "buf", -- For .proto
       },
     },
   },
@@ -59,5 +62,17 @@ return {
     config = function(_, opts)
       require("dap-go").setup(opts)
     end,
+  },
+
+  -- markdown render
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+    ft = { "markdown" },
   },
 }
