@@ -20,6 +20,7 @@ return {
       ensure_installed = {
         "lua",
         "go",
+        "c",
       },
     },
   },
@@ -30,6 +31,9 @@ return {
       ensure_installed = {
         "lua_ls",
         "gopls",
+        "clangd",
+        "clang-format",
+        "rust-analyzer",
       },
     },
   },
@@ -44,9 +48,6 @@ return {
     },
   },
 
-  -- Plugins other than NvChad
-
-  -- Debugger for languages
   {
     "mfussenegger/nvim-dap",
   },

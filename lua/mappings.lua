@@ -10,7 +10,6 @@ map("i", "jk", "<ESC>")
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 --
 
--- nvim-dap-go mappings
 map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
 map("n", "<leader>dus", function()
   local widgets = require "dap.ui.widgets"

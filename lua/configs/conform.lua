@@ -3,6 +3,8 @@ local options = {
     lua = { "stylua" },
     sh = { "shfmt" },
     go = { "gofmt" },
+    cpp = { "clang-format" },
+    rust = { "rustfmt" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
