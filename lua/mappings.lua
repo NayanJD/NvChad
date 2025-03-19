@@ -1,5 +1,7 @@
 require "nvchad.mappings"
 
+local gitsigns = require "gitsigns"
+
 -- add yours here
 
 local map = vim.keymap.set
