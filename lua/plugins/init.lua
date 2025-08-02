@@ -37,6 +37,9 @@ return {
         "rust-analyzer",
         "gopls", -- For golang
         "buf", -- For .proto
+        "bash-language-server",
+        "shellcheck", -- For shell
+        "shfmt", -- For shell
       },
     },
   },
