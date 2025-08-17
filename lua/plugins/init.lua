@@ -40,6 +40,8 @@ return {
         "bash-language-server",
         "shellcheck", -- For shell
         "shfmt", -- For shell
+        "cpptools",
+        "cpplint",
       },
     },
   },
@@ -68,6 +70,9 @@ return {
       require("dap-go").setup(opts)
     end,
   },
+
+-- wakatime code habit tracking
+  { "wakatime/vim-wakatime", lazy = false },
 
   -- markdown render
   {
